@@ -34,11 +34,11 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
-$base-color-hover: darken($base-color, 10%);
+$base-color: #26a69a;
+$base-color-hover: darken($base-color, 30%);
 
 // Define background colors
-$background: #fff;
+$background: darken($base-color, 10%);
 $background-alt: #f2f2f5;
 
 // Define border colors
@@ -46,7 +46,7 @@ $border: #dcd9d9;
 
 // Define text colors
 $heading: #374054;
-$text: #74808a;
+$text: #999;
 
 /*
     ---------------------
@@ -94,6 +94,18 @@ body {
     }
 }
 
+#experience-timeline {
+    > div {
+        h4 {
+            margin: 0;
+        }
+
+        h5 {
+            margin-bottom: 15px;
+        }
+    }
+}
+
 // No JS styles
 .no-js {
     #experience-timeline {
@@ -115,7 +127,7 @@ body {
                 font-size: 1.2em;
                 font-weight: 300;
                 color: #7e8890;
-                margin: 0 0 15px 0;
+                margin: 0;
             }
 
             p {
@@ -168,7 +180,7 @@ header {
 
     a {
         display: block;
-        color: $base-color;
+        color: lighten($base-color, 80%);
         padding: 10px;
 
         &:hover {
@@ -364,7 +376,7 @@ footer {
     transform: translate(-50%, -50%);
     text-align: center;
 
-    h1, h2 {
+    h1, h2, h3 {
         margin: 0;
     }
 
@@ -382,6 +394,10 @@ footer {
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
+    }
+
+    h3 {
+        color: darken(#fff, 20%);
     }
 }
 
@@ -525,7 +541,11 @@ footer {
         font-size: 1.2em;
         font-weight: 300;
         color: #7e8890;
-        margin: 0 0 15px 0;
+        margin: 0;
+    }
+
+    h5 {
+        margin-bottom: 15px;
     }
 
     p {
@@ -652,6 +672,11 @@ footer {
 
 .project-image {
     float: left;
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 .project-info {
